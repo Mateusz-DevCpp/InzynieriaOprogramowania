@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2021-04-07T09:52:15.136Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="GHWlpqkaRmw_MRLkk8KA" version="14.5.8">
+  <diagram id="gKSMYOWAlUSdO_AHCO36" name="Page-1">
+    <mxGraphModel dx="2286" dy="1009" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tT1wZ_8tLlO6eBwku46x-63" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-974.5" y="30" width="295" height="295" as="geometry" />
+        </mxCell>
+        <mxCell id="tT1wZ_8tLlO6eBwku46x-64" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="tT1wZ_8tLlO6eBwku46x-65" target="tT1wZ_8tLlO6eBwku46x-66">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1082" y="197.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tT1wZ_8tLlO6eBwku46x-65" value="Użytkownik niezalogowany" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-1110" y="167.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tT1wZ_8tLlO6eBwku46x-66" value="Zaloguj" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-882" y="87.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tT1wZ_8tLlO6eBwku46x-67" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tT1wZ_8tLlO6eBwku46x-68" target="tT1wZ_8tLlO6eBwku46x-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tT1wZ_8tLlO6eBwku46x-68" value="Resetuj hasło" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-882" y="217.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tT1wZ_8tLlO6eBwku46x-69" value="&lt;b&gt;System&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-842" y="51.5" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
