@@ -1,13 +1,16 @@
 package io.gui;
 
-import io.model.NewClass;
+import io.model.system.*;
 
 public class Main 
 {
     static public void main(String[] args)
     {
-        NewClass nc = new NewClass(0);
-        System.err.println(nc.model());
+        /// konfiguracja poczatkowa
+        Pracownik.init();
+        Karta.init();
+        
+        /// przejscie do programu glownego
         Window.main(args);
     }
 }

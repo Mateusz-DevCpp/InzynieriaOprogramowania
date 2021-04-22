@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2021-04-07T17:55:49.624Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="KFyT9wmen5vy-25QhWyW" version="14.5.8">
+  <diagram id="gKSMYOWAlUSdO_AHCO36" name="Page-1">
+    <mxGraphModel dx="1117" dy="1009" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-58" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="470" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-59" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="470" y="120" width="10" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-60" value="Baza danych" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="425" y="20" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-61" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="105" y="90" width="10" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-62" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="284" y="110" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-63" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="284" y="160" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-64" value="UI" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="239" y="20" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-65" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 9px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;Użytkownik niezalogowany&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="10" y="30" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-66" value="3. Hash hasła użytkownika" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.35;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.017;entryY=0.2;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Lucida Console;fontSize=9;" edge="1" parent="1" source="Nvi0EIaroNL8YbrEyyHH-59" target="Nvi0EIaroNL8YbrEyyHH-63">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="190" as="sourcePoint" />
+            <mxPoint x="300" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-67" value="1. Wpisz login i hasło" style="html=1;verticalAlign=bottom;endArrow=block;exitX=0.917;exitY=0.078;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=9;fontFamily=Lucida Console;" edge="1" parent="1" source="Nvi0EIaroNL8YbrEyyHH-61" target="Nvi0EIaroNL8YbrEyyHH-62">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="190" y="109.65999999999997" as="sourcePoint" />
+            <mxPoint x="270" y="109.65999999999997" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-68" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;fontFamily=Lucida Console;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-69" value="2. Wyszukaj użytkownika" style="html=1;verticalAlign=bottom;endArrow=block;exitX=0.917;exitY=0.078;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=9;fontFamily=Lucida Console;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="293.99999999999994" y="120.00000000000006" as="sourcePoint" />
+            <mxPoint x="470" y="120" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-70" value="5. Użytkownik nie istnieje" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=-0.035;exitY=0.551;exitDx=0;exitDy=0;exitPerimeter=0;fontFamily=Lucida Console;fontSize=9;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="469.6500000000001" y="269.20000000000005" as="sourcePoint" />
+            <mxPoint x="294" y="269.56" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-71" value="&lt;font style=&quot;font-size: 4px;&quot;&gt;6.Niepozytywne &lt;font style=&quot;font-size: 4px;&quot;&gt;logowanie&lt;/font&gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=1;exitY=0.608;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=4;entryX=0.958;entryY=0.607;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Lucida Console;" edge="1" parent="1">
+          <mxGeometry x="-0.0994" relative="1" as="geometry">
+            <mxPoint x="283.59" y="269.00000000000006" as="sourcePoint" />
+            <mxPoint x="114.57999999999993" y="268.6099999999999" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-72" value="4.Pozytywne logowanie" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=-0.035;exitY=0.2;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.041;entryY=0.436;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=4;fontFamily=Lucida Console;" edge="1" parent="1" source="Nvi0EIaroNL8YbrEyyHH-63" target="Nvi0EIaroNL8YbrEyyHH-61">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="269" y="190.00000000000006" as="sourcePoint" />
+            <mxPoint x="123" y="190.56" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Nvi0EIaroNL8YbrEyyHH-73" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontFamily=Lucida Console;fontSize=4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="226" width="470" height="8" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

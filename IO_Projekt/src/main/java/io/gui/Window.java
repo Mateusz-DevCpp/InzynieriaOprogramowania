@@ -9,16 +9,19 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.*;
 
-public class Window extends Application implements EventHandler<ActionEvent> {
+public class Window extends Application implements EventHandler<ActionEvent> 
+{
 
     private Button button[];
     
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         launch(args);
     }
     
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws Exception 
+    {
         stage.setTitle("Test");
         
         Scene scene = new Scene(loadControls(), 800, 600);
@@ -28,11 +31,14 @@ public class Window extends Application implements EventHandler<ActionEvent> {
     }
 
     @Override
-    public void handle(ActionEvent event) {
-        if(event.getSource() == button[0]) {
+    public void handle(ActionEvent event) 
+    {
+        if(event.getSource() == button[0]) 
+        {
             System.err.println("press button 1");
         }
-        else if(event.getSource() == button[1]) {
+        else if(event.getSource() == button[1]) 
+        {
             System.err.println("press button 2");
         }
     }
