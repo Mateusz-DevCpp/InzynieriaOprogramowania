@@ -1,0 +1,105 @@
+@startuml IO
+
+class Manager{
+    + dodaj(T) : bool
+    + usun(T) : bool
+    + wyszukaj(T) : T
+    + get(int id) : T
+    + count() : int
+}
+class ManagerKart{
+    Manager<Karta>
+}
+class ManagerPracownikow{
+    Manager<Pracownik>
+}
+class Repozytorium{
+    - objects : List<T>
+    + dodaj(T) : bool
+    + usun(T) : bool
+    + get(int id) : T
+    + toString() : String
+}
+class RepozytoriumKart{
+    Repozytorium<Karta>
+}
+class RepozytoriumPracownikow{
+    Repozytorium<Pracownik>
+}
+class Pracownik{
+    - id : int
+    - idKarty : int
+    + Pracownik()
+    + get...()
+    + set...()
+}
+class Stanowisko{
+    - nazwa : String
+    - zarobki : float
+    + Stanowisko()
+    + get...()
+    + set...()
+}
+class DaneOsobowe{
+    - imie : String
+    - nazwisko : String
+    - PESEL : String
+    + DaneOsobowe()
+    + get...()
+    + set...()
+}
+class Praktykant{
+}
+class Adres{
+    - kodPocztowy : String
+    - miasto : String
+    - ulica : String
+    - mieszkanie : String
+    + Adres() : String
+    + set...()
+    + get...()
+}
+class Kontakt{
+    - email : String
+    - nrTelefonu : String
+    + Kontakt() : String
+    + get...()
+    + set...()
+}
+class Karta{
+    - id : int
+    - przypisana : bool
+    - historiaLokalizacji : List<Lokalizacja>
+    + clear()
+}
+class Departamenty{
+    - nazwa : String
+    - id : int
+    - lokalizacje : List<Lokalizacja>
+}
+class Lokalizacja{
+    - nazwa : String
+    - data : Date
+}
+class Uprawnienia{
+    - typ : int
+}
+Manager <-- ManagerKart
+Manager <-- ManagerPracownikow
+Repozytorium <-- RepozytoriumKart
+Repozytorium <-- RepozytoriumPracownikow
+ManagerPracownikow -- RepozytoriumPracownikow
+ManagerKart -- RepozytoriumKart
+RepozytoriumPracownikow -- Pracownik
+RepozytoriumKart -- Karta
+Lokalizacja -- Uprawnienia
+Karta -- Uprawnienia
+Lokalizacja -- Departamenty
+Pracownik -- Stanowisko
+Pracownik -- Kontakt
+Pracownik -- Adres
+Pracownik -- DaneOsobowe
+Pracownik <|-- Praktykant
+
+
+@endnuml
