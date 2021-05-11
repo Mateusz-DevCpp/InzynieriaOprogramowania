@@ -1,4 +1,6 @@
 @startuml IO
+    !define DARKBLUE
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
 
 class Manager{
     + dodaj(T) : bool
@@ -48,7 +50,7 @@ class DaneOsobowe{
     + get...()
     + set...()
 }
-class Praktykant{
+class Praktykant extends Pracownik{
 }
 class Adres{
     - kodPocztowy : String
@@ -99,7 +101,7 @@ Pracownik -- Stanowisko
 Pracownik -- Kontakt
 Pracownik -- Adres
 Pracownik -- DaneOsobowe
-Pracownik <|-- Praktykant
+
 
 
 @endnuml
