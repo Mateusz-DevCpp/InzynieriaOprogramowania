@@ -2,68 +2,38 @@ package io.gui;
 
 import java.io.IOException;
 import javafx.application.*;
-import javafx.event.*;
 import javafx.fxml.*;
 import javafx.scene.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
 import javafx.stage.*;
 
-public class Window extends Application implements EventHandler<ActionEvent> 
+public class Window extends Application
 {
-
-    private Button button[];
+   private static Scene scene;
     
     public static void main(String[] args) 
     {
         launch(args);
     }
-    
+
     @Override
-    public void start(Stage stage) throws Exception 
+    public void start(Stage stage) throws IOException 
     {
-        stage.setTitle("Test");
-        
-        Scene scene = new Scene(loadControls(), 800, 600);
-        
+        scene = new Scene(loadFXML("main"), 640, 480);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.setTitle("System zarzadzania pracownikami");
         stage.show();
     }
 
-    @Override
-    public void handle(ActionEvent event) 
+    public static void setRoot(String fxml) throws IOException 
     {
-        if(event.getSource() == button[0]) 
-        {
-            System.err.println("press button 1");
-        }
-        else if(event.getSource() == button[1]) 
-        {
-            System.err.println("press button 2");
-        }
+        scene.setRoot(loadFXML(fxml));
     }
-    
-    public Pane loadControls()
-    {
-        Pane layout = new Pane();
-        
-        button = new Button[2];
-        
-        button[0] = new Button();
-        button[0].setText("click-I");
-        button[0].setLayoutX(10);
-        button[0].setLayoutY(10);
-        button[0].setOnAction(this);
-        
-        button[1] = new Button();
-        button[1].setText("click-II");
-        button[1].setLayoutX(10);
-        button[1].setLayoutY(40);
-        button[1].setOnAction(this);
 
-        layout.getChildren().add(button[0]);
-        layout.getChildren().add(button[1]);
-        
-        return layout;
+    private static Parent loadFXML(String fxml) throws IOException 
+    {
+        System.out.println(Main.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
     }
 }

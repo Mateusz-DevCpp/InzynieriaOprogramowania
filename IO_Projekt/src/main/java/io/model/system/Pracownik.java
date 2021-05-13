@@ -2,7 +2,6 @@ package io.model.system;
 
 public class Pracownik 
 {
-    
     private int id;
     private String imie;
     private String nazwisko;

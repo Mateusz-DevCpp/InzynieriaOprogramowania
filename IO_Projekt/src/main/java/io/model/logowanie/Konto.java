@@ -1,25 +1,9 @@
 package io.model.logowanie;
 
-public class Uzytkownik 
+public class Konto 
 {
-    private int id;
     private String login;
     private String haslo;
-    
-    boolean zaloguj() 
-    {
-        return true;
-    }
-
-    public int getId() 
-    {
-        return id;
-    }
-
-    public void setId(int id) 
-    {
-        this.id = id;
-    }
 
     public String getLogin() 
     {
@@ -40,5 +24,4 @@ public class Uzytkownik
     {
         this.haslo = haslo;
     }
-    
 }

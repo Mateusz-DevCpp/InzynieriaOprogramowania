@@ -1,11 +1,14 @@
 package io.model.system;
 
+import io.model.baza_danych.BazaDanychKont;
 import java.util.List;
 
 public class Karta 
 {
     private int id;
+    private boolean przypisana;
     private List<Lokalizacja> historia_lokalizacji;
+    private Uprawnienia posiadane_uprawiniena;
 
     public Karta(int id) 
     {
@@ -17,6 +20,6 @@ public class Karta
     static private int id_counter = 0;
     static public void init()
     {
-        // pobranie z bazy danych max id dla kart i przypisanie tej wartosci do id_counter;
+        
     }
 }
