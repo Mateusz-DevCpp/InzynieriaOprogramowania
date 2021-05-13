@@ -25,3 +25,5 @@ hs_err_pid*
 # Ignore NetBeans result files
 IO_Projekt/target
 IO_Projekt/nbproject
+/Wzorce/Budowniczy/target/
+/Wzorce/Adapter/target/
