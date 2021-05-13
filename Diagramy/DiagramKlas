@@ -29,6 +29,7 @@ class RepozytoriumPracownikow{
     Repozytorium<Pracownik>
 }
 class Pracownik{
+    - karta : Karta
     - id : int
     - idKarty : int
     + Pracownik()
@@ -72,7 +73,10 @@ class Karta{
     - id : int
     - przypisana : bool
     - historiaLokalizacji : List<Lokalizacja>
+    - uprawnienia: Uprawnienia
     + clear()
+    + czyMogeWejsc() : bool //?
+    // koniec pracy - początek - iloscgodzinstandardowych = iloscNadgodzin
 }
 class Departamenty{
     - nazwa : String
@@ -86,6 +90,20 @@ class Lokalizacja{
 class Uprawnienia{
     - typ : int
 }
+class Administrator
+class ManagerWynagrodzen
+class RepozytoriumWynagrodzen
+class Wynagrodzenie{
+    - pracownik : Pracownik
+    - wartoscWynagrodzenia : double
+    - stawkaZaNadgodziny : double
+    - dataOtrzymania : Date
+    - iloscNadgodzin : int
+    + dodatekZaNadgodziny() : double
+}
+class RepoBazaDanych
+class RBazaDanychWynagrodzen
+
 Manager <-- ManagerKart
 Manager <-- ManagerPracownikow
 Repozytorium <-- RepozytoriumKart
@@ -101,7 +119,11 @@ Pracownik -- Stanowisko
 Pracownik -- Kontakt
 Pracownik -- Adres
 Pracownik -- DaneOsobowe
-
-
-
+Manager <-- ManagerWynagrodzen
+Repozytorium <-- RepozytoriumWynagrodzen
+ManagerWynagrodzen -- RepozytoriumWynagrodzen
+ManagerWynagrodzen -- Wynagrodzenie
+Wynagrodzenie -- Pracownik
+RepoBazaDanych <-- RBazaDanychWynagrodzen
 @endnuml
+//może builder pracowników, ale na razie zbyt skomplikowane
