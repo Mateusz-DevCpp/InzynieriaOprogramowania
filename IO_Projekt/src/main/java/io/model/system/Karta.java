@@ -1,6 +1,5 @@
 package io.model.system;
 
-import io.model.baza_danych.BazaDanychKont;
 import java.util.List;
 
 public class Karta 
