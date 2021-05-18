@@ -50,4 +50,14 @@ public class Repozytorium<T>
     {
         return objects.size();
     }
+    
+    public boolean update(T obj_id, T new_obj)
+    {
+        return true;
+    }
+    
+    public boolean update(int obj_id, T new_obj)
+    {
+        return true;
+    }
 };

@@ -1,6 +1,8 @@
 package io.model.baza_danych;
 
-public abstract class BazaDanych<T>
+import java.util.ArrayList;
+
+public class BazaDanych<T>
 {
     public BazaDanych()
     {
@@ -12,7 +14,7 @@ public abstract class BazaDanych<T>
         
     }
     
-    public int getNextID()
+    public int getMaxID()
     {
         // pobiera max id z bazy danych zwiekasz o 1 i zwraca
         return 1;
@@ -37,15 +39,10 @@ public abstract class BazaDanych<T>
     {
         return false;
     }
-
-    public int find(String id) 
+    
+    public int find(String id)
     {
         return 0;
-    }
-
-    public T get(int id) 
-    {
-        return null;
     }
 
     public int count() 
