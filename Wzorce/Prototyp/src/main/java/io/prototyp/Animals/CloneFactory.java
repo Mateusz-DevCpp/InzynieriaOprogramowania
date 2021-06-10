@@ -1,4 +1,4 @@
-package io.prototyp;
+package io.prototyp.Animals;
 
 public class CloneFactory {
     public Animal getClone(Animal animalSample){

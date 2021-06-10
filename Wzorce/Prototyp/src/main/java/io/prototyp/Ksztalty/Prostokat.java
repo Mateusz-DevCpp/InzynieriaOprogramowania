@@ -1,4 +1,4 @@
-package io.prototyp;
+package io.prototyp.Ksztalty;
 
 public class Prostokat extends Ksztalt
 {

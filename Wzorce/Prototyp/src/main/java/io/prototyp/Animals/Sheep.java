@@ -1,4 +1,4 @@
-package io.prototyp;
+package io.prototyp.Animals;
 
 import java.util.Objects;
 
