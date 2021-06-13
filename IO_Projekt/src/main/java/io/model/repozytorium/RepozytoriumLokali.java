@@ -1,20 +1,20 @@
 package io.model.repozytorium;
 
-import io.model.system.Pracownik;
+import io.model.system.Lokal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepozytoriumPracownikow implements Repozytorium<Pracownik>
+public class RepozytoriumLokali implements Repozytorium<Lokal>
 {
-    private List<Pracownik> objects;
+    private List<Lokal> objects;
     
-    public RepozytoriumPracownikow()
+    public RepozytoriumLokali()
     {
-        objects = new ArrayList<Pracownik>();
+        objects = new ArrayList<Lokal>();
     }
     
     @Override
-    public Pracownik get(int id)
+    public Lokal get(int id)
     {        
         if(id < 0 || id >= objects.size())
             return null;
@@ -23,7 +23,7 @@ public class RepozytoriumPracownikow implements Repozytorium<Pracownik>
     }
 
     @Override
-    public boolean add(Pracownik newObject)
+    public boolean add(Lokal newObject)
     {
         if(newObject == null)
             return false;
@@ -32,7 +32,7 @@ public class RepozytoriumPracownikow implements Repozytorium<Pracownik>
     }
 
     @Override
-    public boolean remove(Pracownik object) 
+    public boolean remove(Lokal object) 
     {
         if(object == null)
             return false;

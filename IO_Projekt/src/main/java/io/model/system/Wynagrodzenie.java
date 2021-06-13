@@ -10,8 +10,8 @@ public class Wynagrodzenie
     private Date data_otrzymania;
     private int ilosc_nadgodzin;
 
-    public Wynagrodzenie(Pracownik pracownik, double wartosc_wynagrodzenia, double stawka_za_nadgodziny, int ilosc_nadgodzin) {
-        
+    public Wynagrodzenie(Pracownik pracownik, double wartosc_wynagrodzenia, double stawka_za_nadgodziny, int ilosc_nadgodzin) 
+    {
         this.pracownik = pracownik;
         this.wartosc_wynagrodzenia = wartosc_wynagrodzenia;
         this.stawka_za_nadgodziny = stawka_za_nadgodziny;
@@ -45,5 +45,14 @@ public class Wynagrodzenie
         return ilosc_nadgodzin;
     }
     
-    
+    public String toString()
+    {
+        String result = "";
+        
+        result += pracownik.toString();
+        result += " : ";
+        result += Double.toString(wartosc_wynagrodzenia);
+        
+        return result;
+    }
 }

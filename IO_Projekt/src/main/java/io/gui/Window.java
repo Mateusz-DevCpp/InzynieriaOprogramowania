@@ -8,7 +8,7 @@ import javafx.stage.*;
 
 public class Window extends Application
 {
-   private static Scene scene;
+    private static Scene scene;
     
     public static void main(String[] args) 
     {
@@ -18,7 +18,7 @@ public class Window extends Application
     @Override
     public void start(Stage stage) throws IOException 
     {
-        scene = new Scene(loadFXML("main"), 640, 480);
+        scene = new Scene(loadFXML("LogowanieWindow"), 1000, 800);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setTitle("System zarzadzania pracownikami");

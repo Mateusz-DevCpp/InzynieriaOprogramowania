@@ -5,11 +5,15 @@ import java.util.Date;
 public class Lokalizacja 
 {
     private Date data;
-    private String pozycja;
+    private Lokal lokal;
+    private boolean dostep_przyznany;
 
-    public Lokalizacja(String pozycja) 
+    public Lokalizacja(Lokal lokal, boolean dostep_przyznany) 
     {
-        this.pozycja = pozycja;
+        this.lokal = lokal;
+        this.dostep_przyznany = dostep_przyznany;
+        
+        data = new Date();
     }
 
     public Date getData() 
@@ -17,8 +21,28 @@ public class Lokalizacja
         return data;
     }
 
-    public String getPozycja() 
+    public Lokal getLokal() 
     {
-        return pozycja;
+        return lokal;
+    }
+
+    public boolean isDostepPrzyznany() 
+    {
+        return dostep_przyznany;
+    }
+
+    public String toString()
+    {
+        String result;
+        
+        result = "Dostep ";
+        if(dostep_przyznany) result += " PRZYZNANY";
+        else result += " NIEPRZYZNANY";
+        result += "\n";
+        result += data.toString();
+        result += "\n";
+        result += lokal.toString();
+        
+        return result;
     }
 }
