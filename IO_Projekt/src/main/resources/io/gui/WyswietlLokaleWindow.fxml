@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.WyswietlPracownikowController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.WyswietlLokaleController">
    <children>
       <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1000.0">
          <menus>
@@ -21,7 +21,7 @@
             <Menu mnemonicParsing="false" text="Pracownicy">
               <items>
                 <MenuItem fx:id="menu_pracownicy_dodaj" mnemonicParsing="false" onAction="#menuDodajPracownika" text="Dodaj" />
-                  <MenuItem fx:id="menu_pracownicy_wyswietl" disable="true" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
+                  <MenuItem fx:id="menu_pracownicy_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Karty">
@@ -33,17 +33,16 @@
             <Menu mnemonicParsing="false" text="Lokal">
               <items>
                 <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" text="Dodaj" />
-                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
+                  <MenuItem fx:id="menu_lokal_wyswietl" disable="true" mnemonicParsing="false" text="Wyswietl" />
               </items>
             </Menu>
          </menus></MenuBar>
-      <ListView fx:id="lv_pracownicy" layoutY="191.0" prefHeight="610.0" prefWidth="1000.0" stylesheets="@stylesheet/bg_list_color.css" />
-      <Button fx:id="bt_szczegoly" layoutX="594.0" layoutY="141.0" mnemonicParsing="false" onAction="#szczegolyPracownika" text="Szczegoly" />
-      <Button fx:id="bt_usun" layoutX="311.0" layoutY="141.0" mnemonicParsing="false" onAction="#usunPracownika" text="Usun" />
-      <Button fx:id="bt_modyfikuj" layoutX="448.0" layoutY="141.0" mnemonicParsing="false" onAction="#modyfikujPracownika" text="Modyfikuj" />
-      <Label layoutX="444.0" layoutY="70.0" text="Pracownicy" />
-      <Button fx:id="bt_filtruj" layoutX="36.0" layoutY="141.0" mnemonicParsing="false" onAction="#filtruj" text="Filtruj" />
-      <TextField fx:id="tf_filtr" layoutX="59.0" layoutY="87.0" />
-      <Label layoutX="59.0" layoutY="62.0" text="Wpisz czesc lub calosc nazwiska" />
+      <ListView layoutY="236.0" prefHeight="564.0" prefWidth="1000.0" />
+      <Button fx:id="bt_usun" layoutX="417.0" layoutY="157.0" mnemonicParsing="false" text="usun" />
+      <Label layoutX="99.0" layoutY="86.0" text="Label" />
+      <Button layoutX="87.0" layoutY="182.0" mnemonicParsing="false" onAction="#filtruj" text="filtruj" />
+      <Button fx:id="bt_modyfikuj" layoutX="516.0" layoutY="157.0" mnemonicParsing="false" text="modyfikuj" />
+      <Button fx:id="bt_szczegoly" layoutX="610.0" layoutY="157.0" mnemonicParsing="false" text="szczegoly" />
+      <TextField fx:id="tf_filtr" layoutX="39.0" layoutY="121.0" />
    </children>
 </Pane>

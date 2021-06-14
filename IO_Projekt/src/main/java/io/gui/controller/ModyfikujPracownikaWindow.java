@@ -105,6 +105,12 @@ public class ModyfikujPracownikaWindow
         Window.setRoot("WyswietlPracownikowWindow");
     }
     
+    @FXML
+    public void menuWyswietlLokale() throws IOException
+    {
+        Window.setRoot("WyswietlLokaleWindow");
+    }
+    
     @FXML private TextField tf_imie;
     @FXML private TextField tf_nazwisko;
     

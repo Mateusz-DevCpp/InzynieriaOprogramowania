@@ -12,7 +12,7 @@
             <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
               <items>
                 <MenuItem fx:id="menu_start_sg" mnemonicParsing="false" text="Strona glowna" />
-                  <MenuItem fx:id="menu_start_wyloguj" mnemonicParsing="false" text="Wyloguj" />
+                  <MenuItem fx:id="menu_start_wyloguj" mnemonicParsing="false" onAction="#wyloguj" text="Wyloguj" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Pracownicy">
@@ -30,7 +30,7 @@
             <Menu mnemonicParsing="false" text="Lokal">
               <items>
                 <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" text="Dodaj" />
-                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" text="Wyswietl" />
+                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
               </items>
             </Menu>
          </menus></MenuBar>

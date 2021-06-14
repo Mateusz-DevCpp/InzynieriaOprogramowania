@@ -12,7 +12,6 @@
             <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
               <items>
                 <MenuItem fx:id="menu_start_sg" mnemonicParsing="false" text="Strona glowna" />
-                  <MenuItem fx:id="menu_start_wyloguj" mnemonicParsing="false" text="Wyloguj" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Pracownicy">
