@@ -17,8 +17,8 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Pracownicy">
               <items>
-                <MenuItem fx:id="menu_pracownicy_dodaj" mnemonicParsing="false" text="Dodaj" />
-                  <MenuItem fx:id="menu_pracownicy_wyswietl" mnemonicParsing="false" text="Wyswietl" />
+                <MenuItem fx:id="menu_pracownicy_dodaj" mnemonicParsing="false" onAction="#menuDodajPracownika" text="Dodaj" />
+                  <MenuItem fx:id="menu_pracownicy_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Karty">
