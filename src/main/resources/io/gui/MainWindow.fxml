@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.MainController">
+   <children>
+      <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1000.0">
+         <menus>
+            <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
+              <items>
+                <MenuItem fx:id="menu_start_sg" mnemonicParsing="false" text="Strona glowna" />
+                  <MenuItem fx:id="menu_start_wyloguj" mnemonicParsing="false" text="Wyloguj" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pracownicy">
+              <items>
+                <MenuItem fx:id="menu_pracownicy_dodaj" mnemonicParsing="false" onAction="#menuDodajPracownika" text="Dodaj" />
+                  <MenuItem fx:id="menu_pracownicy_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Karty">
+              <items>
+                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" text="Dodaj" />
+                  <MenuItem fx:id="menu_karty_wyswietl" mnemonicParsing="false" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Lokal">
+              <items>
+                <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" text="Dodaj" />
+                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" text="Wyswietl" />
+              </items>
+            </Menu>
+         </menus></MenuBar>
+   </children>
+</Pane>
