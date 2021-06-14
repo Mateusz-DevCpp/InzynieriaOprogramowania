@@ -5,6 +5,12 @@ public class Konto
     private String login;
     private String haslo;
 
+    public Konto(String login, String haslo) 
+    {
+        this.login = login;
+        this.haslo = haslo;
+    }
+    
     public String getLogin() 
     {
         return login;

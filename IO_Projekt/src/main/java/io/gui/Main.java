@@ -91,6 +91,5 @@ public class Main
                     manager_lokali.get(1),
                     manager_lokali.get(1).maDostep(manager_kart.get(0)))
         );
-        
     }
 }

@@ -20,6 +20,11 @@ public class BazaDanych<T>
         return 1;
     }
     
+    public T get(int id)
+    {
+        return null;
+    }
+    
     public boolean register(T newObj) 
     {
         return false;

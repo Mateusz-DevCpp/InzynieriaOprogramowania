@@ -60,6 +60,5 @@ public class Lokal
         {
             return false;
         }
-        
     }
 }

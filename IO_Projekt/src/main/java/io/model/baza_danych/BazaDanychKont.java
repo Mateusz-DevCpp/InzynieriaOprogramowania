@@ -10,4 +10,9 @@ public class BazaDanychKont extends BazaDanych<Konto>
         
         connect(/* ... */);
     }
+    
+    public int tryLogin(Konto konto)
+    {
+        return 0;// 0 - logowanie powiodlo sie
+    }
 }
