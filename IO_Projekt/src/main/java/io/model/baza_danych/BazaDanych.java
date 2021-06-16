@@ -1,6 +1,9 @@
 package io.model.baza_danych;
 
 import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class BazaDanych<T>
 {
@@ -11,7 +14,20 @@ public class BazaDanych<T>
     
     public static void connect()
     {
+        String jdbcURL = "jdbc:postgresql://localhost:5432/SYS_ZARZ_PRAC";
+        String username = "postgres";
+        String password = "IO2021#";
         
+        try {
+            Connection connection = DriverManager.getConnection(jdbcURL, username, password);
+            System.out.println("Connected to PostgreSQL server");
+            
+            connection.close();
+            
+        } catch (SQLException ex) {
+            System.out.println("Error  in connection to PostgreSQL server");
+            ex.printStackTrace();
+        }
     }
     
     public int getMaxID()
