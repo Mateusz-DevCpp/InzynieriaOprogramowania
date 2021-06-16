@@ -95,5 +95,4 @@ public class AdresTest {
         instance.setKodPocztowy(kod_pocztowy);
         assertEquals(instance.getKodPocztowy(), kod_pocztowy);
     }
-    
 }

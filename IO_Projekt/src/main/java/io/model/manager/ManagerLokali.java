@@ -61,6 +61,16 @@ public class ManagerLokali implements Manager<Lokal>
     {
         return false;
     }
+    
+    public boolean update(Lokal old_obj, Lokal new_obj) 
+    {
+        old_obj.setNazwa( new_obj.getNazwa() );
+        old_obj.setWymaganeUprawnienia(new_obj.getWymaganeUprawnienia() );
+        old_obj.setOpis( new_obj.getOpis());
+        old_obj.setPosX( new_obj.getPosX());
+        old_obj.setPosY( new_obj.getPosY());
+        return true;
+    }
 
     @Override
     public int getMaxID() 

@@ -32,7 +32,7 @@ public class StanowiskoTest {
     public void testGetNazwa() {
         System.out.println("getNazwa");
         
-        Stanowisko instance = new Stanowisko("name", 100);
+        Stanowisko instance = new Stanowisko(0, "name", 100);
         
         String expResult = "name";
         String result = instance.getNazwa();
@@ -46,7 +46,7 @@ public class StanowiskoTest {
         
         String nazwa = "name^2";
         
-        Stanowisko instance = new Stanowisko("name", 100);
+        Stanowisko instance = new Stanowisko(0, "name", 100);
         instance.setNazwa(nazwa);
         
         assertEquals(instance.getNazwa(), "name^2");
@@ -56,7 +56,7 @@ public class StanowiskoTest {
     public void testGetZarobki() {
         System.out.println("getZarobki");
         
-        Stanowisko instance = new Stanowisko("name", 100);
+        Stanowisko instance = new Stanowisko(0, "name", 100);
         
         float expResult = 100.F;
         float result = instance.getZarobki();
@@ -70,7 +70,7 @@ public class StanowiskoTest {
         
         float zarobki = 0.0F;
         
-        Stanowisko instance = new Stanowisko("name", 100);
+        Stanowisko instance = new Stanowisko(0, "name", 100);
         instance.setZarobki(zarobki);
         
         assertEquals(instance.getZarobki(), 0.0F);

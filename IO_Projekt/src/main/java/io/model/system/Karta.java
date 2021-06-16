@@ -19,6 +19,19 @@ public class Karta
         historia_lokalizacji = new ArrayList<Lokalizacja>();
     }
 
+    public String toString()
+    {
+        String res = "Karta o id [";
+        
+        res += Integer.toString(id);
+        res += "] ";
+        if(przypisana) res += "- [PRZYPISANA]";
+        else res += "- [WOLNA]";
+        
+        
+        return res;
+    }
+    
     public void wyczyscHistorie()
     {
         historia_lokalizacji.clear();

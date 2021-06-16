@@ -141,7 +141,7 @@ public class PracownikTest {
         Kontakt kontakt_sluzbowy = new Kontakt("email.pub", "nr_telefonu_pub");
         Pracownik instance = new Pracownik(0, "imie", "nazwisko", adres, kontakt_prywatny, kontakt_sluzbowy, 0);
         
-        Stanowisko stanowisko = new Stanowisko("Informatyk", 5000.25f);
+        Stanowisko stanowisko = new Stanowisko(0, "Informatyk", 5000.25f);
         instance.setStanowisko(stanowisko);
         
         assertEquals(stanowisko, instance.getStanowisko());

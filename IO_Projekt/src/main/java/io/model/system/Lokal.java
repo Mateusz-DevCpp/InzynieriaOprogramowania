@@ -5,15 +5,27 @@ import java.time.LocalTime;
 public class Lokal 
 {
     private String nazwa;
+    private String opis;
     private int posX, posY;
     private String wymagane_uprawnienia;
 
-    public Lokal(String nazwa, int posX, int posY, String wymagane_uprawnienia_oznaczenia) 
+    public Lokal(String nazwa, int posX, int posY, String wymagane_uprawnienia_oznaczenia, String opis) 
     {
         this.nazwa = nazwa;
         this.posX = posX;
         this.posY = posY;
         this.wymagane_uprawnienia = wymagane_uprawnienia_oznaczenia;
+        this.opis = opis;
+    }
+
+    public String getOpis() 
+    {
+        return opis;
+    }
+
+    public void setOpis(String opis) 
+    {
+        this.opis = opis;
     }
     
     public String toString()
@@ -44,6 +56,27 @@ public class Lokal
     {
         return wymagane_uprawnienia;
     }
+
+    public void setNazwa(String nazwa) 
+    {
+        this.nazwa = nazwa;
+    }
+
+    public void setPosX(int posX) 
+    {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) 
+    {
+        this.posY = posY;
+    }
+
+    public void setWymaganeUprawnienia(String wymagane_uprawnienia) 
+    {
+        this.wymagane_uprawnienia = wymagane_uprawnienia;
+    }
+    
     
     public boolean maDostep(Karta karta)
     {

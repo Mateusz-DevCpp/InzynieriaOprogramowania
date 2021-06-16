@@ -33,7 +33,7 @@ public class LokalizacjaTest {
     public void testGetData() {
         System.out.println("getData");
         
-        Lokalizacja instance = new Lokalizacja(new Lokal("L1", 0, 0, "L1A"), false);
+        Lokalizacja instance = new Lokalizacja(new Lokal("L1", 0, 0, "L1A", ""), false);
         Date result = instance.getData();
         
         System.out.println(result.toString());
@@ -43,7 +43,7 @@ public class LokalizacjaTest {
     public void testGetLokal() {
         System.out.println("getLokal");
         
-        Lokal L1 = new Lokal("L1", 0, 0, "L1A");
+        Lokal L1 = new Lokal("L1", 0, 0, "L1A", "");
         Lokalizacja instance = new Lokalizacja(L1, false);
         Lokal expResult = L1;
         Lokal result = instance.getLokal();
@@ -55,7 +55,7 @@ public class LokalizacjaTest {
     public void testIsDostepPrzyznany() {
         System.out.println("isDostepPrzyznany");
         
-        Lokal L1 = new Lokal("L1", 0, 0, "L1A");
+        Lokal L1 = new Lokal("L1", 0, 0, "L1A", "");
         Lokalizacja instance = new Lokalizacja(L1, false);
         boolean expResult = false;
         boolean result = instance.isDostepPrzyznany();

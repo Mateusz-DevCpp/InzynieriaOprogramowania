@@ -2,13 +2,23 @@ package io.model.system;
 
 public class Stanowisko
 {
+    private int id;
     private String nazwa;
     private float zarobki;
 
-    public Stanowisko(String nazwa, float zarobki) 
+    public Stanowisko( int id, String nazwa, float zarobki) 
     {
+        this.id = id;
         this.nazwa = nazwa;
         this.zarobki = zarobki;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String getNazwa() 
