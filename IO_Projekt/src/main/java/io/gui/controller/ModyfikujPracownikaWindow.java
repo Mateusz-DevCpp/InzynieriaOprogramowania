@@ -3,10 +3,12 @@ package io.gui.controller;
 import io.gui.Main;
 import io.gui.Window;
 import io.model.system.Adres;
+import io.model.system.Karta;
 import io.model.system.Kontakt;
 import io.model.system.Pracownik;
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
@@ -16,6 +18,16 @@ public class ModyfikujPracownikaWindow
     @FXML
     public void initialize()
     {
+        if(WyswietlPracownikowController.wybrany_pracownik.getKarta() == -1)
+        {
+            bt_usun_karte.setDisable(true);
+            bt_karta_info.setDisable(true);
+        }
+        else
+        {
+            bt_przypisz_karte.setDisable(true);
+        }
+        
         lb_wiadomosc.setVisible(false);
         
         tf_imie.setText(WyswietlPracownikowController.wybrany_pracownik.getImie());
@@ -93,6 +105,32 @@ public class ModyfikujPracownikaWindow
         }
     }
     
+    
+    @FXML
+    public void usunPrzypisanaKarte()
+    {
+        Karta karta_pracownika = Main.manager_kart.getByCardID(WyswietlPracownikowController.wybrany_pracownik.getKarta());
+        karta_pracownika.setPrzypisana(false);
+        WyswietlPracownikowController.wybrany_pracownik.setKarta(-1);
+        
+        bt_usun_karte.setDisable(true);
+        bt_karta_info.setDisable(true);
+        bt_przypisz_karte.setDisable(false);
+    }
+    
+    @FXML
+    public void wyswietlInformacjeKarty() throws IOException
+    {
+        WsywietlKartyController.wybrana_karta = Main.manager_kart.getByCardID(WyswietlPracownikowController.wybrany_pracownik.getKarta());
+        Window.setRoot("ModyfikujKarteWindow");
+    }
+    
+    @FXML
+    public void przypiszKarte() throws IOException
+    {
+        Window.setRoot("PrzypiszKarteWindow_pracownik");
+    }
+    
     @FXML
     public void menuDodajPracownika() throws IOException
     {
@@ -103,6 +141,24 @@ public class ModyfikujPracownikaWindow
     public void menuWyswietlPracownikow() throws IOException
     {
         Window.setRoot("WyswietlPracownikowWindow");
+    }
+    
+    @FXML
+    public void menuWyswietlLokale() throws IOException
+    {
+        Window.setRoot("WyswietlLokaleWindow");
+    }
+    
+    @FXML
+    public void menuDodajLokal() throws IOException
+    {
+        Window.setRoot("DodajLokalWindow");
+    }
+    
+    @FXML
+    public void menuWyswietlKarty() throws IOException
+    {
+        Window.setRoot("WsywietlKartyWindow");
     }
     
     @FXML private TextField tf_imie;
@@ -118,6 +174,10 @@ public class ModyfikujPracownikaWindow
     
     @FXML private TextField tf_email_pub;
     @FXML private TextField tf_nr_telefonu_pub;
+    
+    @FXML private Button bt_usun_karte;
+    @FXML private Button bt_karta_info;
+    @FXML private Button bt_przypisz_karte;
     
     @FXML private Label lb_wiadomosc;
 }

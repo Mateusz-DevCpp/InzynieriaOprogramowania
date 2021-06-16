@@ -1,6 +1,8 @@
 package io.gui.controller;
 
+import io.gui.Main;
 import io.gui.Window;
+import io.model.logowanie.Konto;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -22,7 +24,7 @@ public class LogowanieController
         String wprowadzony_login = tf_login.getText();
         String wprowadzone_haslo = tf_haslo.getText();
         
-        if(true)
+        if(Main.manager_kont.probaLogowania(new Konto(wprowadzony_login, wprowadzone_haslo)) == 0)
         {
             Window.setRoot("MainWindow");
         }
@@ -34,6 +36,7 @@ public class LogowanieController
         }
         
     }
+    
     
     @FXML Label lb_wiadomosc;
     @FXML TextField tf_login;

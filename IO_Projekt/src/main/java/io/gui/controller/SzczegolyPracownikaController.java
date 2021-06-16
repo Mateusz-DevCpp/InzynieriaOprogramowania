@@ -7,6 +7,7 @@ import io.model.system.Lokal;
 import io.model.system.Lokalizacja;
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
@@ -31,22 +32,20 @@ public class SzczegolyPracownikaController
     
         karta_pracownika = Main.manager_kart.getByCardID(WyswietlPracownikowController.wybrany_pracownik.getKarta());
         
-        if(WyswietlPracownikowController.wybrany_pracownik.getKarta() != -1)
+        if(WyswietlPracownikowController.wybrany_pracownik.getKarta() == -1)
         {
-            for(int i=0; i<karta_pracownika.getHistoria().size(); i++)
-            {
-                System.err.println("---\n");
-                lv_his_lokalizacji.getItems().add(karta_pracownika.getHistoria().get(i));
-            }
-            System.err.println(karta_pracownika.getHistoria().get(0).toString());
+            lv_his_lokalizacji.getItems().add(
+                new Lokalizacja(
+                    new Lokal("ERROR - Brak przypisanej karty", 0, 0, "", ""), 
+                    false)
+            );
         }
         else
         {
-            lv_his_lokalizacji.getItems().add(
-            new Lokalizacja(
-                    new Lokal("ERROR - Brak karty", 0, 0, ""), 
-                    false)
-            );
+            for(int i=0; i<karta_pracownika.getHistoria().size(); i++)
+            {
+                lv_his_lokalizacji.getItems().add(karta_pracownika.getHistoria().get(i));
+            }
         }
     }
     
@@ -66,6 +65,24 @@ public class SzczegolyPracownikaController
     public void menuWyswietlPracownikow() throws IOException
     {
         Window.setRoot("WyswietlPracownikowWindow");
+    }
+    
+    @FXML
+    public void menuWyswietlLokale() throws IOException
+    {
+        Window.setRoot("WyswietlLokaleWindow");
+    }
+    
+    @FXML
+    public void menuDodajLokal() throws IOException
+    {
+        Window.setRoot("DodajLokalWindow");
+    }
+    
+    @FXML
+    public void menuWyswietlKarty() throws IOException
+    {
+        Window.setRoot("WsywietlKartyWindow");
     }
     
     @FXML private TextField tf_id;

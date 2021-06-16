@@ -119,6 +119,24 @@ public class WyswietlPracownikowController
         Window.setRoot("WyswietlPracownikowWindow");
     }
     
+    @FXML
+    public void menuWyswietlLokale() throws IOException
+    {
+        Window.setRoot("WyswietlLokaleWindow");
+    }
+    
+    @FXML
+    public void menuDodajLokal() throws IOException
+    {
+        Window.setRoot("DodajLokalWindow");
+    }
+    
+    @FXML
+    public void menuWyswietlKarty() throws IOException
+    {
+        Window.setRoot("WsywietlKartyWindow");
+    }
+    
     @FXML private TextField tf_filtr;
     @FXML private ListView<Pracownik> lv_pracownicy;
     

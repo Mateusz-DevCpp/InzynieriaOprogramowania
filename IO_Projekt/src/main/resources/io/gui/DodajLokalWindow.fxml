@@ -2,14 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.WyswietlPracownikowController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.DodajLokalController">
    <children>
       <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1000.0">
          <menus>
@@ -21,7 +21,7 @@
             <Menu mnemonicParsing="false" text="Pracownicy">
               <items>
                 <MenuItem fx:id="menu_pracownicy_dodaj" mnemonicParsing="false" onAction="#menuDodajPracownika" text="Dodaj" />
-                  <MenuItem fx:id="menu_pracownicy_wyswietl" disable="true" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
+                  <MenuItem fx:id="menu_pracownicy_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Karty">
@@ -32,18 +32,22 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Lokal">
               <items>
-                <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" onAction="#menuDodajLokal" text="Dodaj" />
+                <MenuItem fx:id="menu_lokal_dodaj" disable="true" mnemonicParsing="false" text="Dodaj" />
                   <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
               </items>
             </Menu>
          </menus></MenuBar>
-      <ListView fx:id="lv_pracownicy" layoutY="191.0" prefHeight="610.0" prefWidth="1000.0" stylesheets="@stylesheet/bg_list_color.css" />
-      <Button fx:id="bt_szczegoly" layoutX="594.0" layoutY="141.0" mnemonicParsing="false" onAction="#szczegolyPracownika" text="Szczegoly" />
-      <Button fx:id="bt_usun" layoutX="311.0" layoutY="141.0" mnemonicParsing="false" onAction="#usunPracownika" text="Usun" />
-      <Button fx:id="bt_modyfikuj" layoutX="448.0" layoutY="141.0" mnemonicParsing="false" onAction="#modyfikujPracownika" text="Modyfikuj" />
-      <Label layoutX="444.0" layoutY="70.0" text="Pracownicy" />
-      <Button fx:id="bt_filtruj" layoutX="36.0" layoutY="141.0" mnemonicParsing="false" onAction="#filtruj" text="Filtruj" />
-      <TextField fx:id="tf_filtr" layoutX="59.0" layoutY="87.0" />
-      <Label layoutX="59.0" layoutY="62.0" text="Wpisz czesc lub calosc nazwiska" />
+      <Button layoutX="414.0" layoutY="656.0" mnemonicParsing="false" onAction="#dodaj" text="dodaj" />
+      <Label fx:id="lb_wiadomosc" layoutX="243.0" layoutY="524.0" text="wiadomosc o bledzie" />
+      <TextField fx:id="tf_nazwa" layoutX="141.0" layoutY="181.0" />
+      <TextField fx:id="tf_wym_uprawnienia" layoutX="141.0" layoutY="282.0" />
+      <Label layoutX="154.0" layoutY="151.0" text="nazwa" />
+      <Label layoutX="140.0" layoutY="254.0" text="wymagane uprawnienia" />
+      <TextField fx:id="tf_poz_y" layoutX="325.0" layoutY="388.0" />
+      <TextField fx:id="tf_poz_x" layoutX="325.0" layoutY="363.0" />
+      <Label layoutX="264.0" layoutY="367.0" text="pozycja X" />
+      <Label layoutX="264.0" layoutY="392.0" text="pozycja Y" />
+      <Label layoutX="542.0" layoutY="113.0" text="opis" />
+      <TextArea fx:id="ta_opis" layoutX="542.0" layoutY="137.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </Pane>

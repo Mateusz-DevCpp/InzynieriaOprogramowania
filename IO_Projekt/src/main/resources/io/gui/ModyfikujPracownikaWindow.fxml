@@ -20,7 +20,6 @@
             <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
               <items>
                 <MenuItem fx:id="menu_start_sg" mnemonicParsing="false" onAction="#mainMenu" text="Strona glowna" />
-                  <MenuItem fx:id="menu_start_wyloguj" mnemonicParsing="false" text="Wyloguj" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Pracownicy">
@@ -32,13 +31,13 @@
             <Menu mnemonicParsing="false" text="Karty">
               <items>
                 <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" text="Dodaj" />
-                  <MenuItem fx:id="menu_karty_wyswietl" mnemonicParsing="false" text="Wyswietl" />
+                  <MenuItem fx:id="menu_karty_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlKarty" text="Wyswietl" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Lokal">
               <items>
-                <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" text="Dodaj" />
-                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" text="Wyswietl" />
+                <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" onAction="#menuDodajLokal" text="Dodaj" />
+                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
               </items>
             </Menu>
          </menus></MenuBar>
@@ -169,5 +168,9 @@
          </font>
       </Button>
       <Label fx:id="lb_wiadomosc" layoutX="96.0" layoutY="668.0" text="Tytaj bedzie wiadomosc o bledzie" />
+      <Label layoutX="784.0" layoutY="84.0" text="posiadana karta" />
+      <Button fx:id="bt_usun_karte" layoutX="759.0" layoutY="112.0" mnemonicParsing="false" onAction="#usunPrzypisanaKarte" text="usun przypisanie karty" />
+      <Button fx:id="bt_karta_info" layoutX="767.0" layoutY="154.0" mnemonicParsing="false" onAction="#wyswietlInformacjeKarty" text="informacje o karcie" />
+      <Button fx:id="bt_przypisz_karte" layoutX="781.0" layoutY="234.0" mnemonicParsing="false" onAction="#przypiszKarte" text="przypisz karte" />
    </children>
 </Pane>

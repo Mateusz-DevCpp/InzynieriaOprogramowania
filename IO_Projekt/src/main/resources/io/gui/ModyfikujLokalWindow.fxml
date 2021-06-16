@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.ModyfikujLokalController">
    <children>
       <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1000.0">
          <menus>
             <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
               <items>
-                <MenuItem fx:id="menu_start_sg" disable="true" mnemonicParsing="false" text="Strona glowna" />
-                  <MenuItem fx:id="menu_start_wyloguj" mnemonicParsing="false" onAction="#wyloguj" text="Wyloguj" />
+                <MenuItem fx:id="menu_start_sg" mnemonicParsing="false" onAction="#mainMenu" text="Strona glowna" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Pracownicy">
@@ -34,5 +37,17 @@
               </items>
             </Menu>
          </menus></MenuBar>
+      <Button layoutX="561.0" layoutY="691.0" mnemonicParsing="false" onAction="#zapisz" text="zapisz" />
+      <Label layoutX="87.0" layoutY="112.0" text="nazwa" />
+      <Label layoutX="75.0" layoutY="228.0" text="wym upr" />
+      <Label layoutX="73.0" layoutY="343.0" text="px" />
+      <Label layoutX="259.0" layoutY="352.0" text="py" />
+      <TextField fx:id="tf_nazwa" layoutX="41.0" layoutY="142.0" prefHeight="25.0" prefWidth="500.0" text="nazwa..." />
+      <TextField fx:id="tf_wym_uprawnienia" layoutX="29.0" layoutY="258.0" text="upr..." />
+      <TextField fx:id="tf_poz_x" layoutX="27.0" layoutY="369.0" text="x" />
+      <TextField fx:id="tf_poz_y" layoutX="199.0" layoutY="375.0" text="y" />
+      <TextArea fx:id="ta_opis" layoutX="535.0" layoutY="254.0" prefHeight="200.0" prefWidth="200.0" text="description" />
+      <Label layoutX="535.0" layoutY="233.0" text="opis" />
+      <Label fx:id="lb_wiadomosc" layoutX="199.0" layoutY="646.0" text="Miejsce na wiadomosc o bledzie" />
    </children>
 </Pane>

@@ -1,6 +1,12 @@
 package io.gui.controller;
 
+import io.gui.Main;
 import io.gui.Window;
+import io.model.manager.ManagerKart;
+import io.model.manager.ManagerLokali;
+import io.model.manager.ManagerPracownikow;
+import io.model.system.Karta;
+import io.model.system.Pracownik;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -26,17 +32,32 @@ public class MainController
         Window.setRoot("WyswietlPracownikowWindow");
     }
     
+    @FXML
+    public void menuWyswietlLokale() throws IOException
+    {
+        Window.setRoot("WyswietlLokaleWindow");
+    }
     
+    @FXML
+    public void menuDodajLokal() throws IOException
+    {
+        Window.setRoot("DodajLokalWindow");
+    }
     
-    @FXML private MenuItem menu_start_sg;
-    @FXML private MenuItem menu_start_wyloguj;
+    @FXML
+    public void menuWyswietlKarty() throws IOException
+    {
+        Window.setRoot("WsywietlKartyWindow");
+    }
     
-    @FXML private MenuItem menu_pracownicy_dodaj;
-    @FXML private MenuItem menu_pracownicy_wyswietl;
+    @FXML
+    public void wyloguj() throws IOException
+    {
+        Main.manager_kart = new ManagerKart();
+        Main.manager_lokali = new ManagerLokali();
+        Main.manager_pracownikow = new ManagerPracownikow();
+        
+        Window.setRoot("LogowanieWindow");
+    }
     
-    @FXML private MenuItem menu_karty_dodaj;
-    @FXML private MenuItem menu_karty_wyswietl;
-    
-    @FXML private MenuItem menu_lokal_dodaj;
-    @FXML private MenuItem menu_lokal_wyswietl;
 }

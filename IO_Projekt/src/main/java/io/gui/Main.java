@@ -61,6 +61,19 @@ public class Main
         manager_kart.register(
                 new Karta(1, 
                 new Uprawnienia("A1", "00:01", "23:59"),
+                true)
+        );
+        manager_kart.get(0).getPosiadaneUprawiniena().addDostep("NO1");
+        
+        manager_kart.register(
+                new Karta(2, 
+                new Uprawnienia("A2", "00:01", "23:59"),
+                false)
+        );
+        
+        manager_kart.register(
+                new Karta(3, 
+                new Uprawnienia("A3", "00:01", "23:59"),
                 false)
         );
         
@@ -70,14 +83,16 @@ public class Main
                 new Lokal("Budynek 01 Pomieszczenie A1",
                 71, 
                 17, 
-                "A1")
+                "A1",
+                "Opis lokalu ...")
         );
         
         manager_lokali.register(
                 new Lokal("Budynek 01 Pomieszczenie A2",
                 77, 
                 11, 
-                "A2")
+                "A2",
+                "Opis lokalu ...")
         );
         
         manager_kart.get(0).dodajLokalizacje(
