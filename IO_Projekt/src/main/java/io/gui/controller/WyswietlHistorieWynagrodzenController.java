@@ -91,8 +91,7 @@ public class WyswietlHistorieWynagrodzenController
         {
             if(Main.manager_wynagrodzen.get(i).getPracownik() == WyswietlPracownikowController.wybrany_pracownik)
             {
-                LocalDate tmp = LocalDate.now();//Main.manager_wynagrodzen.get(i).getDataOtrzymania();
-                System.err.println(tmp.compareTo(dod) + " " + tmp.compareTo(ddd));
+                LocalDate tmp = Main.manager_wynagrodzen.get(i).getDataOtrzymania();
                 if(tmp.compareTo(dod) >= 1 && tmp.compareTo(ddd) <= -1)
                 {
                     lv_wynagrodzenia.getItems().add(Main.manager_wynagrodzen.get(i));
