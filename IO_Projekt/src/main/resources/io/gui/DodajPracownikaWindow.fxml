@@ -14,7 +14,7 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="74.0" layoutY="110.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="250.0" layoutX="73.0" layoutY="352.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="376.0" layoutY="107.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="373.0" layoutY="106.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
       <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="1000.0">
          <menus>
             <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
@@ -30,7 +30,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Karty">
               <items>
-                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" text="Dodaj" />
+                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" onAction="#menuDodajKarte" text="Dodaj" />
                   <MenuItem fx:id="menu_karty_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlKarty" text="Wyswietl" />
               </items>
             </Menu>
@@ -38,6 +38,11 @@
               <items>
                 <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" onAction="#menuDodajLokal" text="Dodaj" />
                   <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Wynagrodzenia">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuZarzadzajWynagrodzeniami" text="Zarzadzaj" />
               </items>
             </Menu>
          </menus></MenuBar>
@@ -101,27 +106,27 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="402.0" layoutY="146.0" text="Email">
+      <Label layoutX="399.0" layoutY="145.0" text="Email">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_email_priv" layoutX="402.0" layoutY="163.0">
+      <TextField fx:id="tf_email_priv" layoutX="399.0" layoutY="162.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="402.0" layoutY="199.0" text="Numer telefonu">
+      <Label layoutX="399.0" layoutY="198.0" text="Numer telefonu">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_nr_telefonu_priv" layoutX="402.0" layoutY="216.0">
+      <TextField fx:id="tf_nr_telefonu_priv" layoutX="399.0" layoutY="215.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="378.0" layoutY="91.0" text="Kontakt prywatny">
+      <Label layoutX="375.0" layoutY="90.0" text="Kontakt prywatny">
          <font>
             <Font size="14.0" />
          </font>
@@ -168,5 +173,31 @@
          </font>
       </Button>
       <Label fx:id="lb_wiadomosc" layoutX="81.0" layoutY="660.0" text="Gdy beda jakies bledy to tu sie wyswietla" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="713.0" layoutY="356.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
+      <Label layoutX="739.0" layoutY="395.0" text="nazwa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_stanowisko" layoutX="739.0" layoutY="412.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="739.0" layoutY="448.0" text="wynagrodzenie">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_zarobki" layoutX="739.0" layoutY="465.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="715.0" layoutY="340.0" text="Stanowisko">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

@@ -73,6 +73,18 @@ public class PrzypiszKarte_KController
     }
     
     @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
+    }
+    
+    @FXML
     public void filtruj()
     {
         lv_pracownicy.getItems().clear();

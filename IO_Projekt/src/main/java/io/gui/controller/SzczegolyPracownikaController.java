@@ -30,6 +30,17 @@ public class SzczegolyPracownikaController
         tf_email_pub.setText(WyswietlPracownikowController.wybrany_pracownik.getKontaktSluzbowy().getEmail());
         tf_nr_tel_pub.setText(WyswietlPracownikowController.wybrany_pracownik.getKontaktSluzbowy().getNrTelefonu());
     
+        if(WyswietlPracownikowController.wybrany_pracownik.getStanowisko() != null)
+        {
+            tf_stanowisko.setText(WyswietlPracownikowController.wybrany_pracownik.getStanowisko().getNazwa());
+            tf_zarobki.setText(Float.toString(WyswietlPracownikowController.wybrany_pracownik.getStanowisko().getZarobki()));           
+        }
+        else
+        {
+            tf_stanowisko.setText("BRAK");
+            tf_zarobki.setText("BRAK");
+        }
+        
         karta_pracownika = Main.manager_kart.getByCardID(WyswietlPracownikowController.wybrany_pracownik.getKarta());
         
         if(WyswietlPracownikowController.wybrany_pracownik.getKarta() == -1)
@@ -85,6 +96,18 @@ public class SzczegolyPracownikaController
         Window.setRoot("WsywietlKartyWindow");
     }
     
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
+    }
+    
     @FXML private TextField tf_id;
     @FXML private TextField tf_imie;
     @FXML private TextField tf_nazwisko;
@@ -96,6 +119,8 @@ public class SzczegolyPracownikaController
     @FXML private TextField tf_nr_tel_pri;
     @FXML private TextField tf_email_pub;
     @FXML private TextField tf_nr_tel_pub;
+    @FXML private TextField tf_zarobki;
+    @FXML private TextField tf_stanowisko;
     
     @FXML private ListView<Lokalizacja> lv_his_lokalizacji;
 }

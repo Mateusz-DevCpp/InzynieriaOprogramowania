@@ -5,11 +5,8 @@ import io.gui.Window;
 import io.model.manager.ManagerKart;
 import io.model.manager.ManagerLokali;
 import io.model.manager.ManagerPracownikow;
-import io.model.system.Karta;
-import io.model.system.Pracownik;
 import java.io.IOException;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
 
 public class MainController 
 {
@@ -48,6 +45,18 @@ public class MainController
     public void menuWyswietlKarty() throws IOException
     {
         Window.setRoot("WsywietlKartyWindow");
+    }
+    
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
     }
     
     @FXML

@@ -113,6 +113,18 @@ public class ModyfikujLokalController
         Window.setRoot("WsywietlKartyWindow");
     }
     
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
+    }
+    
     @FXML private TextField tf_nazwa;
     @FXML private TextField tf_wym_uprawnienia;
     @FXML private TextField tf_poz_x;

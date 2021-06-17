@@ -132,6 +132,18 @@ public class WyswietlLokaleController
         Window.setRoot("DodajLokalWindow");
     }
     
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
+    }
+    
     @FXML private Button bt_usun;
     @FXML private Button bt_modyfikuj;     
     @FXML private Button bt_szczegoly;
