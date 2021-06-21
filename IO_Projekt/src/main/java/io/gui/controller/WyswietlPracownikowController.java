@@ -137,6 +137,18 @@ public class WyswietlPracownikowController
         Window.setRoot("WsywietlKartyWindow");
     }
     
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
+    }
+    
     @FXML private TextField tf_filtr;
     @FXML private ListView<Pracownik> lv_pracownicy;
     

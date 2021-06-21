@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.ModyfikujLokalController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.WyswietlHistorieWynagrodzenController">
    <children>
       <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1000.0">
          <menus>
@@ -37,22 +36,14 @@
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Wynagrodzenia">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#menuZarzadzajWynagrodzeniami" text="Zarzadzaj" />
-              </items>
+               <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="Zarzadzaj" />
+               </items>
             </Menu>
          </menus></MenuBar>
-      <Button layoutX="561.0" layoutY="691.0" mnemonicParsing="false" onAction="#zapisz" text="zapisz" />
-      <Label layoutX="87.0" layoutY="112.0" text="nazwa" />
-      <Label layoutX="75.0" layoutY="228.0" text="wym upr" />
-      <Label layoutX="73.0" layoutY="343.0" text="px" />
-      <Label layoutX="259.0" layoutY="352.0" text="py" />
-      <TextField fx:id="tf_nazwa" layoutX="41.0" layoutY="142.0" prefHeight="25.0" prefWidth="500.0" text="nazwa..." />
-      <TextField fx:id="tf_wym_uprawnienia" layoutX="29.0" layoutY="258.0" text="upr..." />
-      <TextField fx:id="tf_poz_x" layoutX="27.0" layoutY="369.0" text="x" />
-      <TextField fx:id="tf_poz_y" layoutX="199.0" layoutY="375.0" text="y" />
-      <TextArea fx:id="ta_opis" layoutX="535.0" layoutY="254.0" prefHeight="200.0" prefWidth="200.0" text="description" />
-      <Label layoutX="535.0" layoutY="233.0" text="opis" />
-      <Label fx:id="lb_wiadomosc" layoutX="199.0" layoutY="646.0" text="Miejsce na wiadomosc o bledzie" />
+      <ListView fx:id="lv_wynagrodzenia" layoutX="500.0" layoutY="32.0" prefHeight="768.0" prefWidth="500.0" stylesheets="@stylesheet/bg_list_color.css" />
+      <DatePicker fx:id="dp_od_daty" layoutX="299.0" layoutY="77.0" />
+      <DatePicker fx:id="dp_do_daty" layoutX="299.0" layoutY="130.0" />
+      <Button layoutX="360.0" layoutY="190.0" mnemonicParsing="false" onAction="#filtruj" text="filtruj" />
    </children>
 </Pane>

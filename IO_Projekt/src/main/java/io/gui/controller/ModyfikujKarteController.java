@@ -46,6 +46,29 @@ public class ModyfikujKarteController
             bt_usun.setDisable(true);
             bt_dodaj.setDisable(true);
         }
+        
+        tf_godz_rozp.setText(WsywietlKartyController.wybrana_karta.getPosiadaneUprawiniena().getGodzinaRozpoczecia().toString());
+        tf_godz_zako.setText(WsywietlKartyController.wybrana_karta.getPosiadaneUprawiniena().getGodzinaZakonczenia().toString());
+    }
+    
+    @FXML
+    public void zastosujCzas()
+    {
+        String gr = tf_godz_rozp.getText();
+        String gz = tf_godz_zako.getText();
+        
+        if(gr.length() == 0 || gz.length() == 0)
+        {
+            lb_wiadomosc.setVisible(true);
+            lb_wiadomosc.setTextFill(Color.web("#FF0000"));
+            lb_wiadomosc.setText("Bledna godzina");
+            return;
+        }
+        
+        WsywietlKartyController.wybrana_karta.getPosiadaneUprawiniena().setGodzinaRozpoczecia(gr);
+        WsywietlKartyController.wybrana_karta.getPosiadaneUprawiniena().setGodzinaZakonczenia(gz);
+        
+        ta_pos_uprawnienia.setText(WsywietlKartyController.wybrana_karta.getPosiadaneUprawiniena().toString());
     }
     
     @FXML
@@ -82,6 +105,18 @@ public class ModyfikujKarteController
     public void menuWyswietlKarty() throws IOException
     {
         Window.setRoot("WsywietlKartyWindow");
+    }
+    
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
     }
     
     @FXML
@@ -196,6 +231,8 @@ public class ModyfikujKarteController
     @FXML private TextField tf_id;
     @FXML private CheckBox cb_przpyisana;
     @FXML private TextField tf_filtr;
+    @FXML private TextField tf_godz_rozp;
+    @FXML private TextField tf_godz_zako;
     @FXML private CheckBox cb_posiadane;
     @FXML private CheckBox cb_nieposiadane;
     @FXML private ListView<Lokal> lv_uprawnienial;
