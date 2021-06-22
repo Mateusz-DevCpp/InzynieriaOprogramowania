@@ -8,6 +8,6 @@ public class BazaDanychPracownikow extends BazaDanych<Pracownik>
     {
         super();
         
-        connect(/* ... */);
+        //connect(/* ... */);
     }
 }

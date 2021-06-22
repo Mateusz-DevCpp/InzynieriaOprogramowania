@@ -8,7 +8,7 @@ public class BazaDanychKont extends BazaDanych<Konto>
     {
         super();
         
-        connect(/* ... */);
+        //connect(/* ... */);
     }
     
     public int tryLogin(Konto konto)

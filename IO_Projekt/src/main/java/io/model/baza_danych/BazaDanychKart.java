@@ -8,6 +8,9 @@ public class BazaDanychKart extends BazaDanych<Karta>
     {
         super();
         
-        connect(/* ... */);
+        createDataBase();
+        createTables();
+        
+        //connect(/* ... */);
     }
 }
