@@ -4,7 +4,12 @@ import io.model.baza_danych.BazaDanychWynagrodzen;
 import io.model.repozytorium.RepozytoriumWynagrodzen;
 import io.model.system.Pracownik;
 import io.model.system.Wynagrodzenie;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ManagerWynagrodzen implements Manager<Wynagrodzenie>
 {
@@ -17,6 +22,32 @@ public class ManagerWynagrodzen implements Manager<Wynagrodzenie>
         repo_baz = new BazaDanychWynagrodzen();
     }
 
+    @Override
+    public Connection polacz()
+    {     
+        String url = "jdbc:postgresql://localhost:5432/sys_zarz_prac_test";
+        String user = "postgres";
+        String password = "IO2021#";
+        
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection(url, user, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerWynagrodzen.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        return con;    
+    }
+    
+    @Override
+    public void rozlacz(Connection con)
+    {     
+        try {
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerWynagrodzen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     @Override
     public boolean register(Wynagrodzenie newObj) 
     {

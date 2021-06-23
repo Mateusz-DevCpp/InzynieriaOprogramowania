@@ -3,6 +3,11 @@ package io.model.manager;
 import io.model.baza_danych.BazaDanychPracownikow;
 import io.model.repozytorium.RepozytoriumPracownikow;
 import io.model.system.Pracownik;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ManagerPracownikow implements Manager<Pracownik>
 {
@@ -13,6 +18,33 @@ public class ManagerPracownikow implements Manager<Pracownik>
     {
         repo_ram = new RepozytoriumPracownikow();
         repo_baz = new BazaDanychPracownikow();
+    }
+    
+    @Override
+    public Connection polacz()
+    {     
+        String url = "jdbc:postgresql://localhost:5432/sys_zarz_prac_test";
+        String user = "postgres";
+        String password = "IO2021#";
+        
+        Connection con = null;
+
+        try {
+            con = DriverManager.getConnection(url, user, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerPracownikow.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return con;    
+    }
+    
+    @Override
+    public void rozlacz(Connection con)
+    {     
+        try {
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerPracownikow.class.getName()).log(Level.SEVERE, null, ex);
+        } 
     }
     
     @Override

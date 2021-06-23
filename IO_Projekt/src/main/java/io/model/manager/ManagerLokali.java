@@ -1,25 +1,63 @@
 package io.model.manager;
 
+import io.model.baza_danych.BazaDanychLokali;
 import io.model.repozytorium.RepozytoriumLokali;
 import io.model.system.Lokal;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ManagerLokali implements Manager<Lokal>
 {
     private RepozytoriumLokali repo_ram = null;
+    private BazaDanychLokali repo_baz = null;
     
     public ManagerLokali()
     {
         repo_ram = new RepozytoriumLokali();
+        repo_baz = new BazaDanychLokali();
     }
 
+    @Override
+    public Connection polacz()
+    {     
+        String url = "jdbc:postgresql://localhost:5432/sys_zarz_prac_test";
+        String user = "postgres";
+        String password = "IO2021#";
+        
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection(url, user, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerLokali.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return con;    
+    }
+    
+    @Override
+    public void rozlacz(Connection con)
+    {      
+        try {
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerLokali.class.getName()).log(Level.SEVERE, null, ex);
+        }   
+    }
+    
     @Override
     public boolean register(Lokal newObj) 
     {
         boolean register_status = false;
         
-        register_status = repo_ram.add(newObj);
+        //if(repo_baz.register(newObj))
+        //{
+            register_status = repo_ram.add(newObj);
+        //}
         
         return register_status;
+
     }
 
     @Override
@@ -27,7 +65,10 @@ public class ManagerLokali implements Manager<Lokal>
     {
         boolean unregister_status = false;
         
-        unregister_status = repo_ram.remove(obj);
+        //if(repo_baz.unregister(obj))
+        //{
+            unregister_status = repo_ram.remove(obj);
+        //}
         
         return unregister_status;
     }

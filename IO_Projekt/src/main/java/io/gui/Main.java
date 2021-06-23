@@ -58,12 +58,19 @@ public class Main
             new Kontakt("emailAMDwa@poczta.pl", "321123321"), -1)
         );
         
+<<<<<<< Updated upstream
+=======
+        //manager_pracownikow.get(0).setStanowisko(new Stanowisko(0, "Programista", 15000.00f));
+        //manager_pracownikow.get(1).setStanowisko(new Stanowisko(1, "Grafik", 14000.00f));
+        //manager_pracownikow.get(2).setStanowisko(new Stanowisko(2, "Technik", 13000.00f));
+        
+>>>>>>> Stashed changes
         manager_kart.register(
                 new Karta(1, 
                 new Uprawnienia("A1", "00:01", "23:59"),
                 true)
         );
-        manager_kart.get(0).getPosiadaneUprawiniena().addDostep("NO1");
+        //manager_kart.get(0).getPosiadaneUprawiniena().addDostep("NO1");
         
         manager_kart.register(
                 new Karta(2, 
@@ -77,7 +84,7 @@ public class Main
                 false)
         );
         
-        manager_pracownikow.get(0).setKarta(1);
+        //manager_pracownikow.get(0).setKarta(1);
         
         manager_lokali.register(
                 new Lokal("Budynek 01 Pomieszczenie A1",
@@ -95,7 +102,7 @@ public class Main
                 "Opis lokalu ...")
         );
         
-        manager_kart.get(0).dodajLokalizacje(
+        /*manager_kart.get(0).dodajLokalizacje(
                 new Lokalizacja(
                     manager_lokali.get(0),
                     manager_lokali.get(0).maDostep(manager_kart.get(0)))
@@ -105,6 +112,6 @@ public class Main
                 new Lokalizacja(
                     manager_lokali.get(1),
                     manager_lokali.get(1).maDostep(manager_kart.get(0)))
-        );
+        );*/
     }
 }

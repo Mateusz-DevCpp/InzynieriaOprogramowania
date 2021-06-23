@@ -1,7 +1,11 @@
 package io.model.manager;
 
+import java.sql.Connection;
+
 interface Manager<T>
 {
+    public Connection polacz();
+    public void rozlacz(Connection connection);
     public boolean register(T newObj);
     public boolean unregister(T obj);
     public T get(int id);

@@ -3,6 +3,11 @@ package io.model.manager;
 import io.model.baza_danych.BazaDanychKart;
 import io.model.repozytorium.RepozytoriumKart;
 import io.model.system.Karta;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ManagerKart implements Manager<Karta>
 {
@@ -15,6 +20,33 @@ public class ManagerKart implements Manager<Karta>
         repo_baz = new BazaDanychKart();
     }
 
+    @Override
+    public Connection polacz()
+    {     
+        String url = "jdbc:postgresql://localhost:5432/sys_zarz_prac_test";
+        String user = "postgres";
+        String password = "IO2021#";
+        
+            Connection con = null;
+        try {
+            con = DriverManager.getConnection(url, user, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerKart.class.getName()).log(Level.SEVERE, null, ex);
+        }   
+        return con;    
+    }
+    
+    @Override
+    public void rozlacz(Connection con)
+    {     
+        try {  
+            con.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ManagerKart.class.getName()).log(Level.SEVERE, null, ex);
+        }
+   
+    }
+    
     @Override
     public boolean register(Karta newObj) 
     {
