@@ -21,19 +21,29 @@ public class BazaDanychKont extends BazaDanych<Konto>
     {
         int log = 1;
         try(Connection con = connect(2)){
-            /*PreparedStatement ps1 = null;
-            String sql1 = null;
-            sql1 = "INSERT INTO loginfo(username, password, id) VALUES(?, ?, ?)";
-                    ps1 = con.prepareStatement(sql1);
-                    ps1.setString(1, "admin");
-                    ps1.setString(2, "haslo");
-                    ps1.setInt(3, 1);
-                    ps1.executeUpdate();
-                    ps1.close();*/
-            
-            PreparedStatement tmp_ps = null;
+
+            String tmp_sql1 = "SELECT count(*) FROM loginfo";
+            PreparedStatement tmp_ps1 = con.prepareStatement(tmp_sql1);
+            ResultSet ex1 = tmp_ps1.executeQuery();      
+         
+            if(ex1.next())
+            {
+                String tmp = ex1.getString(1);
+                if (tmp.contentEquals("0"))
+                {
+                    String sql1 = "INSERT INTO loginfo(username, password, id) VALUES(?, ?, ?)";
+                    try (PreparedStatement ps1 = con.prepareStatement(sql1)) {
+                        ps1.setString(1, "admin");
+                        ps1.setString(2, "haslo");
+                        ps1.setInt(3, 1);
+                        ps1.executeUpdate();
+                    }
+                }
+            }              
+            tmp_ps1.close();
+
             String tmp_sql = "SELECT id, username FROM loginfo WHERE username = ? AND password = ?";
-            tmp_ps = con.prepareStatement(tmp_sql);
+            PreparedStatement tmp_ps = con.prepareStatement(tmp_sql);
             tmp_ps.setString(1, konto.getLogin());
             tmp_ps.setString(2, konto.getHaslo());
             ResultSet ex = tmp_ps.executeQuery();
@@ -42,6 +52,7 @@ public class BazaDanychKont extends BazaDanych<Konto>
                 log = 0;
             }
             tmp_ps.close();
+            disconnect(con);
         } 
         catch (SQLException ex) {
             Logger.getLogger(BazaDanychKart.class.getName()).log(Level.SEVERE, null, ex);

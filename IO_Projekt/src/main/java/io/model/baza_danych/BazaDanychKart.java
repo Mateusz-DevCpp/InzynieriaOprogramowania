@@ -114,4 +114,61 @@ public class BazaDanychKart extends BazaDanych<Karta>
         return added;
     }
     
+  /*  public Karta get(int id) 
+    {
+        BazaDanychKart repo_baza = null;
+        
+        try(Connection con = connect(2))
+        {   
+            int id_karty = id;
+            int id_karta_tmp;
+            boolean przypisana;
+            String przypisane_uprawnienia;     
+            
+            PreparedStatement ps1 = null;
+            String sql1 =  null;
+                        
+            PreparedStatement tmp_ps1 = null;
+            String tmp_sql1 =  null;
+    
+            tmp_sql1 = "SELECT count(*) FROM karta WHERE id = ?";
+            tmp_ps1 = con.prepareStatement(tmp_sql1);
+            tmp_ps1.setInt(1, id_karty);
+            ResultSet ex1 = tmp_ps1.executeQuery();      
+         
+            if(ex1.next())
+            {
+                String tmp = ex1.getString(1);
+                //System.out.println("pierwszy if " + tmp);
+                if (tmp.contentEquals("0"))
+                {   
+                    System.out.println("Brak kart o id" + tmp);
+                }
+                else
+                {
+                    sql1 = "SELECT * FROM karta WHERE id = ?";
+                    ps1 = con.prepareStatement(sql1);
+                    ps1.setInt(1, id_karty);
+                    ResultSet ex2  = ps1.executeQuery();
+                    
+                    while (ex2.next()) 
+                    {
+                        id_karta_tmp = ex2.getInt(1);
+                        przypisana = ex2.getBoolean(2);
+                        przypisane_uprawnienia = ex2.getString(3);                     
+                    }           
+                    ps1.close();
+                } 
+            }              
+            tmp_ps1.close();                
+    
+            disconnect(con);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(BazaDanychKart.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return repo_baza.get(id);
+    }
+    */
 }
