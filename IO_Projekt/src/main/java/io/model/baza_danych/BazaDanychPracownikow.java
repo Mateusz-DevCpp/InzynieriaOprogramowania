@@ -14,7 +14,7 @@ public class BazaDanychPracownikow extends BazaDanych<Pracownik>
     {
         super();
         
-        connect(/* ... */);
+        //connect(/* ... */);
     }
     
     /*public boolean register(Pracownik newObj) 

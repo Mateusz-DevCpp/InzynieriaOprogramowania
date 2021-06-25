@@ -121,6 +121,18 @@ public class PrzypiszKarte_PController
         Window.setRoot("WsywietlKartyWindow");
     }
     
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
+    }
+    
     @FXML private TextField tf_filtr;
     @FXML private Button bt_przypisz;
     @FXML private ListView<Karta> lv_dostepne_karty;

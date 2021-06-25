@@ -30,7 +30,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Karty">
               <items>
-                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" text="Dodaj" />
+                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" onAction="#menuDodajKarte" text="Dodaj" />
                   <MenuItem fx:id="menu_karty_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlKarty" text="Wyswietl" />
               </items>
             </Menu>
@@ -38,6 +38,11 @@
               <items>
                 <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" onAction="#menuDodajLokal" text="Dodaj" />
                   <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Wynagrodzenia">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuZarzadzajWynagrodzeniami" text="Zarzadzaj" />
               </items>
             </Menu>
          </menus></MenuBar>
@@ -172,5 +177,31 @@
       <Button fx:id="bt_usun_karte" layoutX="759.0" layoutY="112.0" mnemonicParsing="false" onAction="#usunPrzypisanaKarte" text="usun przypisanie karty" />
       <Button fx:id="bt_karta_info" layoutX="767.0" layoutY="154.0" mnemonicParsing="false" onAction="#wyswietlInformacjeKarty" text="informacje o karcie" />
       <Button fx:id="bt_przypisz_karte" layoutX="781.0" layoutY="234.0" mnemonicParsing="false" onAction="#przypiszKarte" text="przypisz karte" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="691.0" layoutY="390.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
+      <Label layoutX="717.0" layoutY="429.0" text="nazwa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_nazwa_stanowiska" layoutX="717.0" layoutY="446.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="717.0" layoutY="482.0" text="zarobki">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_zarobki" layoutX="717.0" layoutY="499.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="693.0" layoutY="374.0" text="Stanowisko">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

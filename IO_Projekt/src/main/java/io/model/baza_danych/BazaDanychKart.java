@@ -17,14 +17,10 @@ public class BazaDanychKart extends BazaDanych<Karta>
     {
         super();
         
-<<<<<<< Updated upstream
-        connect(/* ... */);
-=======
-        //createDataBase();
-        //createTables();
+        createDataBase();
+        createTables();
         
         //connect(/* ... */);
->>>>>>> Stashed changes
     }
     
     public boolean register(Karta newObj) 

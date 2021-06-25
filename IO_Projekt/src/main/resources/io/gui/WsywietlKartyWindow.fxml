@@ -30,7 +30,7 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Karty">
               <items>
-                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" text="Dodaj" />
+                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" onAction="#menuDodajKarte" text="Dodaj" />
                   <MenuItem fx:id="menu_karty_wyswietl" disable="true" mnemonicParsing="false" text="Wyswietl" />
               </items>
             </Menu>
@@ -38,6 +38,11 @@
               <items>
                 <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" onAction="#menuDodajLokal" text="Dodaj" />
                   <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Wynagrodzenia">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#menuZarzadzajWynagrodzeniami" text="Zarzadzaj" />
               </items>
             </Menu>
          </menus></MenuBar>

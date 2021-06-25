@@ -51,10 +51,10 @@ public class ManagerLokali implements Manager<Lokal>
     {
         boolean register_status = false;
         
-        //if(repo_baz.register(newObj))
-        //{
+        if(repo_baz.register(newObj))
+        {
             register_status = repo_ram.add(newObj);
-        //}
+        }
         
         return register_status;
 
@@ -65,10 +65,10 @@ public class ManagerLokali implements Manager<Lokal>
     {
         boolean unregister_status = false;
         
-        //if(repo_baz.unregister(obj))
-        //{
+        if(repo_baz.unregister(obj))
+        {
             unregister_status = repo_ram.remove(obj);
-        //}
+        }
         
         return unregister_status;
     }

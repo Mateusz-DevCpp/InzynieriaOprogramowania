@@ -11,8 +11,6 @@ public class SzczegolyLokaluController
     @FXML
     public void initialize()
     {
-        // to sie wykona podczas wlaczania onka, ktory ma ustawiony ten controller
-        
         tf_nazwa.setText(WyswietlLokaleController.wybrany_lokal.getNazwa());
         tf_wym_uprawnienia.setText(WyswietlLokaleController.wybrany_lokal.getWymaganeUprawnienia());
         tf_poz_x.setText(Integer.toString(WyswietlLokaleController.wybrany_lokal.getPosX()));
@@ -48,6 +46,18 @@ public class SzczegolyLokaluController
     public void menuWyswietlKarty() throws IOException
     {
         Window.setRoot("WsywietlKartyWindow");
+    }
+    
+    @FXML
+    public void menuDodajKarte() throws IOException
+    {
+        Window.setRoot("DodajKarteWindow");
+    }
+    
+    @FXML
+    public void menuZarzadzajWynagrodzeniami() throws IOException
+    {
+        Window.setRoot("ZarzadzajWynadrodzeniamiWindow");
     }
     
     @FXML private TextField tf_nazwa;

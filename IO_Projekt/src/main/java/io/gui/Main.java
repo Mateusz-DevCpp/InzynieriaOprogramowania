@@ -10,6 +10,7 @@ public class Main
     public static ManagerPracownikow manager_pracownikow;
     public static ManagerKart manager_kart;
     public static ManagerLokali manager_lokali;
+    public static ManagerWynagrodzen manager_wynagrodzen;
     
     static public void main(String[] args) throws IOException
     {
@@ -17,6 +18,7 @@ public class Main
         manager_kart = new ManagerKart();
         manager_lokali = new ManagerLokali();
         manager_kont = new ManagerKont();
+        manager_wynagrodzen = new ManagerWynagrodzen();
         
         
         /// konfiguracja poczatkowa
@@ -33,6 +35,7 @@ public class Main
         manager_kart = null;
         manager_lokali = null;
         manager_kont = null;
+        manager_wynagrodzen = null;
     }
     
     static private void dodajDaneTestowe()
@@ -58,13 +61,10 @@ public class Main
             new Kontakt("emailAMDwa@poczta.pl", "321123321"), -1)
         );
         
-<<<<<<< Updated upstream
-=======
         //manager_pracownikow.get(0).setStanowisko(new Stanowisko(0, "Programista", 15000.00f));
         //manager_pracownikow.get(1).setStanowisko(new Stanowisko(1, "Grafik", 14000.00f));
         //manager_pracownikow.get(2).setStanowisko(new Stanowisko(2, "Technik", 13000.00f));
         
->>>>>>> Stashed changes
         manager_kart.register(
                 new Karta(1, 
                 new Uprawnienia("A1", "00:01", "23:59"),

@@ -53,9 +53,12 @@ public class Uprawnienia
         else
             this.uprawnienia_oznaczenia = this.uprawnienia_oznaczenia.replace(uprawnienia_oznaczenia, "");
         
-        if(this.uprawnienia_oznaczenia.charAt(this.uprawnienia_oznaczenia.length()-1) == '\n')
+        if(this.uprawnienia_oznaczenia.length() != 0)
         {
-            this.uprawnienia_oznaczenia = this.uprawnienia_oznaczenia.substring(0, this.uprawnienia_oznaczenia.length()-1);
+            if(this.uprawnienia_oznaczenia.charAt(this.uprawnienia_oznaczenia.length()-1) == '\n')
+            {
+                this.uprawnienia_oznaczenia = this.uprawnienia_oznaczenia.substring(0, this.uprawnienia_oznaczenia.length()-1);
+            }
         }
     }
 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.SzczegolyPracownikaController">
+   <children>
+      <ImageView fitHeight="203.0" fitWidth="211.0" layoutX="21.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Osoba.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="1000.0">
+         <menus>
+            <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
+              <items>
+                <MenuItem fx:id="menu_start_sg" mnemonicParsing="false" onAction="#mainMenu" text="Strona glowna" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pracownicy">
+              <items>
+                <MenuItem fx:id="menu_pracownicy_dodaj" mnemonicParsing="false" onAction="#menuDodajPracownika" text="Dodaj" />
+                  <MenuItem fx:id="menu_pracownicy_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Karty">
+              <items>
+                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" text="Dodaj" />
+                  <MenuItem fx:id="menu_karty_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlKarty" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Lokal">
+              <items>
+                <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" onAction="#menuDodajLokal" text="Dodaj" />
+                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
+              </items>
+            </Menu>
+         </menus></MenuBar>
+      <Label layoutX="85.0" layoutY="269.0" text="Imie" />
+      <Label layoutX="81.0" layoutY="323.0" text="Nazwisko" />
+      <TextField fx:id="tf_imie" disable="true" layoutX="81.0" layoutY="286.0" text="Imie..." />
+      <TextField fx:id="tf_nazwisko" disable="true" layoutX="81.0" layoutY="340.0" text="Imie..." />
+      <Label layoutX="85.0" layoutY="400.0" text="Ulica" />
+      <TextField fx:id="tf_ulica" disable="true" layoutX="85.0" layoutY="417.0" text="ulica..." />
+      <Label layoutX="85.0" layoutY="455.0" text="Mieszkanie" />
+      <TextField fx:id="tf_mieszkanie" disable="true" layoutX="85.0" layoutY="472.0" text="mieszkanie..." />
+      <Label layoutX="81.0" layoutY="518.0" text="Kod pocztowy" />
+      <TextField fx:id="tf_kod_pocztowy" disable="true" layoutX="81.0" layoutY="535.0" text="kod pocztowy..." />
+      <Label layoutX="81.0" layoutY="574.0" text="Miasto" />
+      <TextField fx:id="tf_miasto" disable="true" layoutX="81.0" layoutY="591.0" text="miasto..." />
+      <Label layoutX="322.0" layoutY="400.0" text="Prywatny email" />
+      <TextField fx:id="tf_email_pri" disable="true" layoutX="322.0" layoutY="417.0" text="ulica..." />
+      <Label layoutX="322.0" layoutY="455.0" text="Prywatny numer telefonu" />
+      <TextField fx:id="tf_nr_tel_pri" disable="true" layoutX="322.0" layoutY="472.0" text="mieszkanie..." />
+      <Label layoutX="314.0" layoutY="644.0" text="Firmowy numer telefonu" />
+      <Label layoutX="322.0" layoutY="583.0" text="Firmowy email" />
+      <TextField fx:id="tf_email_pub" disable="true" layoutX="322.0" layoutY="600.0" text="miasto..." />
+      <TextField fx:id="tf_nr_tel_pub" disable="true" layoutX="314.0" layoutY="661.0" text="kod pocztowy..." />
+      <ListView fx:id="lv_his_lokalizacji" layoutX="722.0" layoutY="75.0" prefHeight="725.0" prefWidth="278.0" stylesheets="@stylesheet/bg_list_color.css" />
+      <Label layoutX="820.0" layoutY="48.0" text="historia lokalizacji" />
+      <Label layoutX="318.0" layoutY="75.0" text="Identyfikator" />
+      <TextField fx:id="tf_id" disable="true" layoutX="277.0" layoutY="99.0" text="ID..." />
+   </children>
+</Pane>

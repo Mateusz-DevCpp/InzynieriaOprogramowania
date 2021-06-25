@@ -22,7 +22,7 @@ public class ManagerKont implements Manager<Konto>
     {     
         String url = "jdbc:postgresql://localhost:5432/sys_zarz_prac_test";
         String user = "postgres";
-        String password = "IO2021#";
+        String password = "Akacja";
         
         Connection con = null;
       

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.gui.controller.ModyfikujPracownikaWindow">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="74.0" layoutY="110.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="250.0" layoutX="73.0" layoutY="352.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="376.0" layoutY="107.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
+      <MenuBar layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="1000.0">
+         <menus>
+            <Menu fx:id="menu_start" mnemonicParsing="false" text="Start">
+              <items>
+                <MenuItem fx:id="menu_start_sg" mnemonicParsing="false" onAction="#mainMenu" text="Strona glowna" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Pracownicy">
+              <items>
+                <MenuItem fx:id="menu_pracownicy_dodaj" mnemonicParsing="false" onAction="#menuDodajPracownika" text="Dodaj" />
+                  <MenuItem fx:id="menu_pracownicy_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlPracownikow" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Karty">
+              <items>
+                <MenuItem fx:id="menu_karty_dodaj" mnemonicParsing="false" text="Dodaj" />
+                  <MenuItem fx:id="menu_karty_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlKarty" text="Wyswietl" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Lokal">
+              <items>
+                <MenuItem fx:id="menu_lokal_dodaj" mnemonicParsing="false" onAction="#menuDodajLokal" text="Dodaj" />
+                  <MenuItem fx:id="menu_lokal_wyswietl" mnemonicParsing="false" onAction="#menuWyswietlLokale" text="Wyswietl" />
+              </items>
+            </Menu>
+         </menus></MenuBar>
+      <Label layoutX="101.0" layoutY="141.0" text="Imie">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_imie" layoutX="99.0" layoutY="158.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="99.0" layoutY="194.0" text="Nazwisko">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_nazwisko" layoutX="99.0" layoutY="211.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="98.0" layoutY="378.0" text="Ulica">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_ulica" layoutX="98.0" layoutY="395.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="98.0" layoutY="431.0" text="Mieszkanie">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_mieszkanie" layoutX="98.0" layoutY="448.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="98.0" layoutY="529.0" text="Miasto">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_miasto" layoutX="98.0" layoutY="546.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="98.0" layoutY="481.0" text="Kod pocztowy">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_kod_pocztowy" layoutX="98.0" layoutY="498.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="402.0" layoutY="146.0" text="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_email_priv" layoutX="402.0" layoutY="163.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="402.0" layoutY="199.0" text="Numer telefonu">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_nr_telefonu_priv" layoutX="402.0" layoutY="216.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="378.0" layoutY="91.0" text="Kontakt prywatny">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1cf50000" height="192.0" layoutX="377.0" layoutY="352.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="230.0" />
+      <Label layoutX="403.0" layoutY="391.0" text="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_email_pub" layoutX="403.0" layoutY="408.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="403.0" layoutY="444.0" text="Numer telefonu">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_nr_telefonu_pub" layoutX="403.0" layoutY="461.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="379.0" layoutY="336.0" text="Kontakt sluzbowy">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="331.0" text="Adres">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="92.0" text="Dane osobowe">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt_zapisz" layoutX="427.0" layoutY="646.0" mnemonicParsing="false" onAction="#zapiszPracowinka" text="Zapisz">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="lb_wiadomosc" layoutX="96.0" layoutY="668.0" text="Tytaj bedzie wiadomosc o bledzie" />
+      <Label layoutX="784.0" layoutY="84.0" text="posiadana karta" />
+      <Button fx:id="bt_usun_karte" layoutX="759.0" layoutY="112.0" mnemonicParsing="false" onAction="#usunPrzypisanaKarte" text="usun przypisanie karty" />
+      <Button fx:id="bt_karta_info" layoutX="767.0" layoutY="154.0" mnemonicParsing="false" onAction="#wyswietlInformacjeKarty" text="informacje o karcie" />
+      <Button fx:id="bt_przypisz_karte" layoutX="781.0" layoutY="234.0" mnemonicParsing="false" onAction="#przypiszKarte" text="przypisz karte" />
+   </children>
+</Pane>
